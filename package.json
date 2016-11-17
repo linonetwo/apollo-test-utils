@@ -1,11 +1,19 @@
 {
-  "name": "",
-  "version": "0.0.0",
+  "name": "apollo-test-utils",
+  "version": "0.0.1",
   "description": "",
   "author": "Kamil Kisiela <kamil.kisiela@gmail.com>",
   "license": "MIT",
   "main": "./dist/src/index.js",
   "typings": "./dist/src/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apollostack/apollo-test-utils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/apollostack/apollo-test-utils/issues"
+  },
+  "homepage": "https://github.com/apollostack/apollo-test-utils#readme",
   "scripts": {
     "pretest": "npm run build",
     "test": "npm run test-only --",
@@ -14,7 +22,7 @@
     "test-watch": "mocha --reporter spec --full-trace dist/tests/index.js --watch",
     "coverage": "istanbul cover ./node_modules/mocha/bin/_mocha -- --reporter dot --full-trace dist/tests/index.js",
     "postcoverage": "remap-istanbul --input coverage/coverage.json --type lcovonly --output coverage/lcov.info",
-    "lint": "tslint -e src/*.ts && tslint tests/*.ts",
+    "lint": "tslint src/*.ts && tslint tests/*.ts",
     "prebuild": "npm run clean:dist",
     "build": "tsc",
     "watch": "tsc -w",
@@ -23,10 +31,14 @@
     "clean:coverage": "rimraf coverage/*",
     "prepublish": "npm run clean && npm run build"
   },
+  "peerDependencies": {
+    "apollo-client": "^0.5.0"
+  },
   "devDependencies": {
     "@types/chai": "^3.4.32",
     "@types/mocha": "^2.2.31",
     "@types/sinon": "^1.16.29",
+    "apollo-client": "^0.5.5",
     "chai": "^3.5.0",
     "istanbul": "^0.4.4",
     "mocha": "^3.1.2",
@@ -35,6 +47,7 @@
     "sinon": "^1.17.5",
     "source-map-support": "^0.4.5",
     "tslint": "^3.15.1",
-    "typescript": "^2.0.0"
+    "typed-graphql": "^1.0.2",
+    "typescript": "~2.0.10"
   }
 }
