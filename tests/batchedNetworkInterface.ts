@@ -2,7 +2,7 @@ import { assert } from 'chai';
 
 import merge = require('lodash.merge');
 
-import { HTTPBatchedNetworkInterface } from '../src/transport/batchedNetworkInterface';
+import { HTTPBatchedNetworkInterface } from 'apollo-client/transport/batchedNetworkInterface';
 
 import {
   createMockFetch,
@@ -55,7 +55,7 @@ describe('HTTPBatchedNetworkInterface', () => {
       resultList.push(result);
     });
 
-    fetch = fetchFunc || createMockFetch({
+    fetchFunc || createMockFetch({
       url,
       opts: merge({
         body: JSON.stringify(printedRequests),

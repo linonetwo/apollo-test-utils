@@ -66,7 +66,7 @@ import wrap from '../src/util/wrap';
 
 import observableToPromise, {
   observableToPromiseAndSubscription,
-} from './util/observableToPromise';
+} from '../src/util/observableToPromise';
 
 describe('QueryManager', () => {
 
