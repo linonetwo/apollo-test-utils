@@ -32,7 +32,7 @@
     "prepublish": "npm run clean && npm run build"
   },
   "peerDependencies": {
-    "apollo-client": "^0.5.0"
+    "apollo-client": "^0.5.5"
   },
   "devDependencies": {
     "@types/chai": "^3.4.32",
@@ -40,7 +40,10 @@
     "@types/sinon": "^1.16.29",
     "apollo-client": "^0.5.5",
     "chai": "^3.5.0",
+    "graphql": "^0.8.2",
+    "graphql-tag": "^1.0.0",
     "istanbul": "^0.4.4",
+    "lodash": "^4.17.2",
     "mocha": "^3.1.2",
     "remap-istanbul": "^0.7.0",
     "rimraf": "^2.5.4",
@@ -48,6 +51,7 @@
     "source-map-support": "^0.4.5",
     "tslint": "^3.15.1",
     "typed-graphql": "^1.0.2",
-    "typescript": "~2.0.10"
+    "typescript": "~2.0.10",
+    "whatwg-fetch": "^2.0.1"
   }
 }
