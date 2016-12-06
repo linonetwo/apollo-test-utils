@@ -19,9 +19,8 @@ import { AfterwareInterface } from 'apollo-client/transport/afterware';
 
 import { GraphQLResult } from 'graphql';
 
-import 'whatwg-fetch';
-
 import gql from 'graphql-tag';
+
 
 describe('HTTPBatchedNetworkInterface', () => {
   // Helper method that tests a roundtrip given a particular set of requests to the
