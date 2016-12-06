@@ -16,7 +16,7 @@ import {
 
 // Pass in multiple mocked responses, so that you can test flows that end up
 // making multiple queries to the server
-export default function mockNetworkInterface(
+export function mockNetworkInterface(
   ...mockedResponses: MockedResponse[]
 ): NetworkInterface {
   return new MockNetworkInterface(mockedResponses);

@@ -1,9 +1,8 @@
-import * as chai from 'chai';
-const { assert } = chai;
+import { assert } from 'chai';
 
 // I'm not sure why mocha doesn't provide something like this, you can't
 // always use promises
-export default (done: MochaDone, cb: (...args: any[]) => any) => (...args: any[]) => {
+export const wrap = (done: MochaDone, cb: (...args: any[]) => any) => (...args: any[]) => {
   try {
     return cb(...args);
   } catch (e) {

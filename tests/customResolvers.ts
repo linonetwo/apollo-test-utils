@@ -5,7 +5,7 @@ import ApolloClient, { toIdValue } from 'apollo-client';
 import { NetworkStatus } from 'apollo-client/queries/store';
 
 
-import mockNetworkInterface from '../src/mocks/mockNetworkInterface';
+import { mockNetworkInterface } from '../src';
 
 
 describe('custom resolvers', () => {

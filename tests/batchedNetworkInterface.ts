@@ -5,11 +5,6 @@ import merge = require('lodash.merge');
 import { HTTPBatchedNetworkInterface } from 'apollo-client/transport/batchedNetworkInterface';
 
 import {
-  createMockFetch,
-  createMockedIResponse,
-} from '../src/mocks/mockFetch';
-
-import {
   Request,
   printRequest,
 } from 'apollo-client/transport/networkInterface';
@@ -20,6 +15,12 @@ import { AfterwareInterface } from 'apollo-client/transport/afterware';
 import { GraphQLResult } from 'graphql';
 
 import gql from 'graphql-tag';
+
+
+import {
+  createMockFetch,
+  createMockedIResponse,
+} from '../src';
 
 
 describe('HTTPBatchedNetworkInterface', () => {

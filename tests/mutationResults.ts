@@ -9,7 +9,7 @@ import { NormalizedCache, StoreObject } from 'apollo-client/data/storeUtils';
 import { isMutationResultAction, isQueryResultAction } from 'apollo-client/actions';
 
 
-import mockNetworkInterface from '../src/mocks/mockNetworkInterface';
+import { mockNetworkInterface } from '../src';
 
 describe('mutation results', () => {
   const query = gql`

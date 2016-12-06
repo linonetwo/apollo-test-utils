@@ -8,7 +8,7 @@ import { addFragmentsToDocument } from 'apollo-client/queries/getFromAST';
 import { createFragment } from 'apollo-client/index';
 
 
-import mockNetworkInterface from '../src/mocks/mockNetworkInterface';
+import { mockNetworkInterface } from '../src';
 
 
 describe('updateQuery on a simple query', () => {

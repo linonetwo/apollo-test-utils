@@ -9,7 +9,7 @@ import { QueryManager } from 'apollo-client/core/QueryManager';
 import { createApolloStore } from 'apollo-client/store';
 
 
-import { mockSubscriptionNetworkInterface } from '../src/mocks/mockNetworkInterface';
+import { mockSubscriptionNetworkInterface } from '../src';
 
 
 describe('GraphQL Subscriptions', () => {

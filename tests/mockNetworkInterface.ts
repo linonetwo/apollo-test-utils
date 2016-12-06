@@ -7,7 +7,7 @@ import gql from 'graphql-tag';
 import {
   mockSubscriptionNetworkInterface,
   MockedSubscription,
-} from '../src/mocks/mockNetworkInterface';
+} from '../src';
 
 
 

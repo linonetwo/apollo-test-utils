@@ -51,7 +51,7 @@ import {
 
 
 
-import mockNetworkInterface from '../src/mocks/mockNetworkInterface';
+import { mockNetworkInterface } from '../src';
 
 
 import {

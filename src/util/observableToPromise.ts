@@ -96,7 +96,7 @@ export function observableToPromiseAndSubscription({
   };
 };
 
-export default function(
+export function observableToPromise(
   options: Options,
   ...cbs: ResultCallback[]
 ): Promise<any[]> {

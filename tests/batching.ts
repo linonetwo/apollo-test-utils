@@ -9,9 +9,8 @@ import {
 } from 'apollo-client/transport/batching';
 import { Request } from 'apollo-client/transport/networkInterface';
 
-import {
-  mockBatchedNetworkInterface,
-} from '../src/mocks/mockNetworkInterface';
+
+import { mockBatchedNetworkInterface } from '../src';
 
 
 const networkInterface = mockBatchedNetworkInterface();
