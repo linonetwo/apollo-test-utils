@@ -12,16 +12,14 @@ import {
   applyMiddleware,
 } from 'redux';
 
+import {
+  GraphQLError,
+  GraphQLResult,
+  Document,
+  FragmentDefinition,
+} from 'graphql';
 import gql from 'graphql-tag';
 import { print } from 'graphql-tag/printer';
-
-import ApolloClient, {
-  createFragment,
-  clearFragmentDefinitions,
-  disableFragmentWarnings,
-  printAST,
-  enableFragmentWarnings,
-} from 'apollo-client';
 
 import { Store } from 'apollo-client/store';
 import { ApolloError } from 'apollo-client/errors/ApolloError';
@@ -30,6 +28,13 @@ import { fragmentDefinitionsMap } from 'apollo-client/fragments';
 import { QueryManager } from 'apollo-client/core/QueryManager';
 import { createBatchingNetworkInterface } from 'apollo-client/transport/batchedNetworkInterface';
 import { getFragmentDefinitions } from 'apollo-client/queries/getFromAST';
+import ApolloClient, {
+  createFragment,
+  clearFragmentDefinitions,
+  disableFragmentWarnings,
+  printAST,
+  enableFragmentWarnings,
+} from 'apollo-client';
 import {
   createNetworkInterface,
   HTTPNetworkInterface,
@@ -37,12 +42,7 @@ import {
   NetworkInterface,
 } from 'apollo-client/transport/networkInterface';
 
-import {
-  GraphQLError,
-  GraphQLResult,
-  Document,
-  FragmentDefinition,
-} from 'graphql';
+
 
 import {
   rootReducer as todosReducer,
@@ -57,11 +57,10 @@ import { mockNetworkInterface } from '../src';
 import {
   createMockFetch,
   createMockedIResponse,
-} from '../src/mocks/mockFetch';
+  observableToPromise,
+} from '../src';
 
-import { withWarning } from '../src/util/wrap';
-import observableToPromise from '../src/util/observableToPromise';
-
+import { withWarning } from '../src';
 
 // make it easy to assert with promises
 chaiUse(chaiAsPromised);

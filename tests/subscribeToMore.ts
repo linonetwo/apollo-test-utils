@@ -4,7 +4,7 @@ import gql from 'graphql-tag';
 
 import ApolloClient from 'apollo-client';
 
-import { mockSubscriptionNetworkInterface } from '../src/mocks/mockNetworkInterface';
+import { mockSubscriptionNetworkInterface } from '../src';
 
 
 describe('subscribeToMore', () => {

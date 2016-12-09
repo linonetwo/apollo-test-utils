@@ -8,7 +8,7 @@ import { NetworkStatus } from 'apollo-client/queries/store';
 import gql from 'graphql-tag';
 
 
-import mockNetworkInterface from '../src/mocks/mockNetworkInterface';
+import { mockNetworkInterface } from '../src';
 
 
 describe('QueryScheduler', () => {

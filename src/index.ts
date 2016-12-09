@@ -18,10 +18,20 @@ export {
   mockNetworkInterface,
   mockSubscriptionNetworkInterface,
   MockedSubscription,
+  ParsedRequest,
 } from './mocks/mockNetworkInterface';
 
 export { mockQueryManager } from './mocks/mockQueryManager';
 export { mockWatchQuery } from './mocks/mockWatchQuery';
 
-export { wrap } from './util/wrap';
+export {
+  wrap,
+  withWarning,
+} from './util/wrap';
+
 export { subscribeAndCount } from './util/subscribeAndCount';
+
+export {
+  observableToPromise,
+  observableToPromiseAndSubscription,
+} from '../src/util/observableToPromise';

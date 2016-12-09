@@ -1,72 +1,41 @@
-import {
-  QueryManager,
-} from 'apollo-client/core/QueryManager';
+import { assert } from 'chai';
+import { assign } from 'lodash';
+import * as Rx from 'rxjs';
 
-import mockQueryManager from '../src/mocks/mockQueryManager';
-
-import mockWatchQuery from '../src/mocks/mockWatchQuery';
-
-import { ObservableQuery } from 'apollo-client/core/ObservableQuery';
-
-import { WatchQueryOptions } from 'apollo-client/core/watchQueryOptions';
-
-import {
-  createApolloStore,
-  ApolloStore,
-} from 'apollo-client/store';
-
-import {
-  getIdField,
-} from 'apollo-client/data/extensions';
-
+import { createStore, combineReducers, applyMiddleware } from 'redux';
 import gql from 'graphql-tag';
 
-import {
-  assert,
-} from 'chai';
+import { QueryManager } from 'apollo-client/core/QueryManager';
+import { ObservableQuery } from 'apollo-client/core/ObservableQuery';
+import { WatchQueryOptions } from 'apollo-client/core/watchQueryOptions';
+import { NetworkInterface } from 'apollo-client/transport/networkInterface';
+import { ApolloError } from 'apollo-client/errors/ApolloError';
+import { Observer } from 'apollo-client/util/Observable';
+import { NetworkStatus } from 'apollo-client/queries/store';
+import { createApolloStore, ApolloStore } from 'apollo-client/store';
+import { getIdField } from 'apollo-client/data/extensions';
+import ApolloClient, { ApolloStateSelector } from 'apollo-client/ApolloClient';
+import { ApolloQueryResult } from 'apollo-client/core/QueryManager';
 
 import {
   Document,
   GraphQLResult,
 } from 'graphql';
 
-import ApolloClient, {
-  ApolloStateSelector,
-} from 'apollo-client/ApolloClient';
 
 import {
-  ApolloQueryResult,
-} from 'apollo-client/core/QueryManager';
-
-import { createStore, combineReducers, applyMiddleware } from 'redux';
-
-import * as Rx from 'rxjs';
-
-import assign = require('lodash.assign');
-
-import mockNetworkInterface, {
+  mockNetworkInterface,
+  mockQueryManager,
   ParsedRequest,
-} from '../src/mocks/mockNetworkInterface';
+  mockWatchQuery,
+} from '../src';
 
 import {
-  NetworkInterface,
-} from 'apollo-client/transport/networkInterface';
-
-import {
-  ApolloError,
-} from 'apollo-client/errors/ApolloError';
-
-import {
-  Observer,
-} from 'apollo-client/util/Observable';
-
-import { NetworkStatus } from 'apollo-client/queries/store';
-
-import wrap from '../src/util/wrap';
-
-import observableToPromise, {
+  wrap,
+  observableToPromise,
   observableToPromiseAndSubscription,
-} from '../src/util/observableToPromise';
+} from '../src';
+
 
 describe('QueryManager', () => {
 

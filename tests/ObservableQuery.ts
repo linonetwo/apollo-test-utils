@@ -7,11 +7,12 @@ import { ObservableQuery } from 'apollo-client/core/ObservableQuery';
 import { NetworkStatus } from 'apollo-client/queries/store';
 
 
-import mockQueryManager from '../src';
-import mockWatchQuery from '../src';
-
-import wrap from '../src';
-import subscribeAndCount from '../src';
+import {
+  mockQueryManager,
+  mockWatchQuery,
+  wrap,
+  subscribeAndCount,
+} from '../src';
 
 
 describe('ObservableQuery', () => {

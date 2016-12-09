@@ -11,7 +11,7 @@ import { addTypenameToDocument } from 'apollo-client/queries/queryTransform';
 import { isMutationResultAction } from 'apollo-client/actions';
 
 
-import mockNetworkInterface from '../src/mocks/mockNetworkInterface';
+import { mockNetworkInterface } from '../src';
 
 
 describe('optimistic mutation results', () => {
