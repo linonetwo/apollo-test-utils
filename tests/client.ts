@@ -154,6 +154,7 @@ describe('client', () => {
           mutations: {},
           data: {},
           optimistic: [],
+          reducerError: null
         },
       }
     );
@@ -472,8 +473,10 @@ describe('client', () => {
           returnPartialData: false,
           lastRequestId: 1,
           previousVariables: null,
+          metadata: null,
         },
       },
+      reducerError: null,
       mutations: {},
     }) };
 
