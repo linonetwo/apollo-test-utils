@@ -1988,7 +1988,7 @@ describe('QueryManager', () => {
         mutations: {},
         queries: {},
         optimistic: [],
-        reducerError: null
+        reducerError: null,
       };
 
       assert.deepEqual(currentState, expectedState);

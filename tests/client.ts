@@ -1,13 +1,11 @@
 import { cloneDeep, assign } from 'lodash';
 
 import { use as chaiUse, assert } from 'chai';
-const chaiAsPromised = require('chai-as-promised');
 
 import { useFakeTimers } from 'sinon';
 
 import {
   createStore,
-  Store as ReduxStore,
   combineReducers,
   applyMiddleware,
 } from 'redux';
@@ -21,7 +19,6 @@ import {
 import gql from 'graphql-tag';
 import { print } from 'graphql-tag/printer';
 
-import { Store } from 'apollo-client/store';
 import { ApolloError } from 'apollo-client/errors/ApolloError';
 import { NetworkStatus } from 'apollo-client/queries/store';
 import { fragmentDefinitionsMap } from 'apollo-client/fragments';
@@ -62,6 +59,7 @@ import {
 
 import { withWarning } from '../src';
 
+import chaiAsPromised from 'chai-as-promised';
 // make it easy to assert with promises
 chaiUse(chaiAsPromised);
 
@@ -154,7 +152,7 @@ describe('client', () => {
           mutations: {},
           data: {},
           optimistic: [],
-          reducerError: null
+          reducerError: null,
         },
       }
     );
@@ -169,9 +167,9 @@ describe('client', () => {
   });
 
   it('throws on removed queryTransformer option', () => {
-    assert.throws(() => {
-      new ApolloClient({ queryTransformer: 'anything' });
-    }, /addTypename/);
+    assert.throws(() =>
+      new ApolloClient({ queryTransformer: 'anything' })
+    , /addTypename/);
   });
 
   it('sets reduxRootKey if you use ApolloClient as middleware', () => {

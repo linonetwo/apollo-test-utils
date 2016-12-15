@@ -3,7 +3,7 @@ import { assert } from 'chai';
 import gql from 'graphql-tag';
 import { GraphQLResult } from 'graphql';
 
-import { 
+import {
   QueryBatcher,
   QueryFetchRequest,
 } from 'apollo-client/transport/batching';
