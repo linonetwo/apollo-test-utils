@@ -1502,48 +1502,6 @@ describe('client', () => {
       });
     });
 
-    it('should not print a warning if we call disableFragmentWarnings', (done) => {
-      const oldWarn = console.warn;
-      console.warn = (str: string) => {
-        done(new Error('Returned a warning despite calling disableFragmentWarnings'));
-      };
-      disableFragmentWarnings();
-      createFragment(gql`
-        fragment authorDetails on Author {
-          firstName
-        }
-      `);
-      createFragment(gql`
-        fragment authorDetails on Author {
-          lastName
-        }`);
-
-      // create fragment operates synchronously so if it returns and doesn't call
-      // console.warn, we are done.
-      setTimeout(() => {
-        console.warn = oldWarn;
-        done();
-      }, 100);
-    });
-
-    it('should not add multiple instances of the same fragment to fragmentDefinitionsMap', () => {
-      createFragment(gql`
-        fragment authorDetails on Author {
-          author {
-            firstName
-            lastName
-          }
-        }`);
-      createFragment(gql`
-        fragment authorDetails on Author {
-          author {
-            firstName
-            lastName
-          }
-        }`);
-      assert(fragmentDefinitionsMap.hasOwnProperty('authorDetails'));
-      assert.equal(fragmentDefinitionsMap['authorDetails'].length, 1);
-    });
 
     it('should not mutate the input document when querying', () => {
       const client = new ApolloClient();
