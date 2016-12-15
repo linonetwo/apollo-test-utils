@@ -103,20 +103,6 @@ describe('client', () => {
     assert.equal((client.networkInterface as HTTPNetworkInterface)._uri, networkInterface._uri);
   });
 
-  it('can allow passing in a store', () => {
-    const client = new ApolloClient();
-
-    const store: ReduxStore<any> = createStore(
-      combineReducers({
-        todos: todosReducer,
-        apollo: client.reducer()as any,
-      }),
-      applyMiddleware(client.middleware())
-    );
-
-    assert.deepEqual(client.store.getState(), store.getState());
-  });
-
   it('throws an error if you pass in a store without apolloReducer', () => {
     try {
       const client = new ApolloClient();
