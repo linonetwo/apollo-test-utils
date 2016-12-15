@@ -1628,7 +1628,7 @@ describe('client', () => {
       },
     };
     const url = 'http://not-a-real-url.com';
-    createMockFetch({
+    fetch = createMockFetch({
       url,
       opts: {
         body: JSON.stringify([
@@ -1687,7 +1687,7 @@ describe('client', () => {
         }
       }`;
     const url = 'http://not-a-real-url.com';
-    createMockFetch({
+    fetch = createMockFetch({
       url,
       opts: {
         body: JSON.stringify([
@@ -1753,7 +1753,7 @@ describe('client', () => {
       },
     };
     const url = 'http://not-a-real-url.com';
-    createMockFetch({
+    fetch = createMockFetch({
       url,
       opts: {
         body: JSON.stringify([

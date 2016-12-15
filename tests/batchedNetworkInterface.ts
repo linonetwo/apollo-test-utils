@@ -55,7 +55,7 @@ describe('HTTPBatchedNetworkInterface', () => {
       resultList.push(result);
     });
 
-    fetchFunc || createMockFetch({
+    fetch = fetchFunc || createMockFetch({
       url,
       opts: merge({
         body: JSON.stringify(printedRequests),
