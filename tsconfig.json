@@ -1,8 +1,12 @@
-
 {
   "compilerOptions": {
     "target": "es5",
     "lib": ["es6", "dom"],
+    "types": [
+      "node",
+      "mocha",
+      "chai"
+    ],
     "module": "commonjs",
     "moduleResolution": "node",
     "removeComments": true,
