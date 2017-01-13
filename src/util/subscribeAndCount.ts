@@ -1,6 +1,6 @@
-import { ObservableQuery } from 'apollo-client/core/ObservableQuery';
-import { ApolloQueryResult } from 'apollo-client/core/QueryManager';
-import { Subscription } from 'apollo-client/util/Observable';
+import { ObservableQuery } from 'apollo-client/lib/src/core/ObservableQuery';
+import { ApolloQueryResult } from 'apollo-client/lib/src/core/QueryManager';
+import { Subscription } from 'apollo-client/lib/src/util/Observable';
 
 import { wrap } from './wrap';
 

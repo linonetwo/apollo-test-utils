@@ -3,7 +3,7 @@ import {
   BatchedNetworkInterface,
   Request,
   SubscriptionNetworkInterface,
-} from 'apollo-client/transport/networkInterface';
+} from 'apollo-client/lib/src/transport/networkInterface';
 
 import {
   GraphQLResult,

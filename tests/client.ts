@@ -19,12 +19,12 @@ import {
 import gql from 'graphql-tag';
 import { print } from 'graphql-tag/printer';
 
-import { ApolloError } from 'apollo-client/errors/ApolloError';
-import { NetworkStatus } from 'apollo-client/queries/store';
-import { fragmentDefinitionsMap } from 'apollo-client/fragments';
-import { QueryManager } from 'apollo-client/core/QueryManager';
-import { createBatchingNetworkInterface } from 'apollo-client/transport/batchedNetworkInterface';
-import { getFragmentDefinitions } from 'apollo-client/queries/getFromAST';
+import { ApolloError } from 'apollo-client/lib/src/errors/ApolloError';
+import { NetworkStatus } from 'apollo-client/lib/src/queries/store';
+import { fragmentDefinitionsMap } from 'apollo-client/lib/src/fragments';
+import { QueryManager } from 'apollo-client/lib/src/core/QueryManager';
+import { createBatchingNetworkInterface } from 'apollo-client/lib/src/transport/batchedNetworkInterface';
+import { getFragmentDefinitions } from 'apollo-client/lib/src/queries/getFromAST';
 import ApolloClient, {
   createFragment,
   clearFragmentDefinitions,
@@ -37,7 +37,7 @@ import {
   HTTPNetworkInterface,
   Request,
   NetworkInterface,
-} from 'apollo-client/transport/networkInterface';
+} from 'apollo-client/lib/src/transport/networkInterface';
 
 
 

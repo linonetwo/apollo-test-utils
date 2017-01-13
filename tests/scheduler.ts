@@ -1,10 +1,10 @@
 import { assert } from 'chai';
 
-import { QueryScheduler } from 'apollo-client/scheduler/scheduler';
-import { QueryManager } from 'apollo-client/core/QueryManager';
-import { WatchQueryOptions } from 'apollo-client/core/watchQueryOptions';
-import { createApolloStore } from 'apollo-client/store';
-import { NetworkStatus } from 'apollo-client/queries/store';
+import { QueryScheduler } from 'apollo-client/lib/src/scheduler/scheduler';
+import { QueryManager } from 'apollo-client/lib/src/core/QueryManager';
+import { WatchQueryOptions } from 'apollo-client/lib/src/core/watchQueryOptions';
+import { createApolloStore } from 'apollo-client/lib/src/store';
+import { NetworkStatus } from 'apollo-client/lib/src/queries/store';
 import gql from 'graphql-tag';
 
 

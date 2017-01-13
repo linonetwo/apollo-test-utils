@@ -6,8 +6,8 @@ import { GraphQLResult } from 'graphql';
 import {
   QueryBatcher,
   QueryFetchRequest,
-} from 'apollo-client/transport/batching';
-import { Request } from 'apollo-client/transport/networkInterface';
+} from 'apollo-client/lib/src/transport/batching';
+import { Request } from 'apollo-client/lib/src/transport/networkInterface';
 
 
 import { mockBatchedNetworkInterface } from '../src';

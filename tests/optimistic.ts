@@ -4,11 +4,11 @@ import { assert } from 'chai';
 import gql from 'graphql-tag';
 
 import ApolloClient, { createFragment } from 'apollo-client';
-import { MutationBehaviorReducerArgs, MutationBehavior, MutationQueryReducersMap } from 'apollo-client/data/mutationResults';
-import { NormalizedCache, StoreObject } from 'apollo-client/data/storeUtils';
-import { addFragmentsToDocument } from 'apollo-client/queries/getFromAST';
-import { addTypenameToDocument } from 'apollo-client/queries/queryTransform';
-import { isMutationResultAction } from 'apollo-client/actions';
+import { MutationBehaviorReducerArgs, MutationBehavior, MutationQueryReducersMap } from 'apollo-client/lib/src/data/mutationResults';
+import { NormalizedCache, StoreObject } from 'apollo-client/lib/src/data/storeUtils';
+import { addFragmentsToDocument } from 'apollo-client/lib/src/queries/getFromAST';
+import { addTypenameToDocument } from 'apollo-client/lib/src/queries/queryTransform';
+import { isMutationResultAction } from 'apollo-client/lib/src/actions';
 
 
 import { mockNetworkInterface } from '../src';

@@ -2,7 +2,7 @@ import { assert } from 'chai';
 import gql from 'graphql-tag';
 
 import ApolloClient, { toIdValue } from 'apollo-client';
-import { NetworkStatus } from 'apollo-client/queries/store';
+import { NetworkStatus } from 'apollo-client/lib/src/queries/store';
 
 
 import { mockNetworkInterface } from '../src';

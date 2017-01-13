@@ -4,8 +4,8 @@ import { assert } from 'chai';
 import gql from 'graphql-tag';
 
 import ApolloClient from 'apollo-client';
-import { addFragmentsToDocument } from 'apollo-client/queries/getFromAST';
-import { createFragment } from 'apollo-client/index';
+import { addFragmentsToDocument } from 'apollo-client/lib/src/queries/getFromAST';
+import { createFragment } from 'apollo-client/lib/src/index';
 
 
 import { mockNetworkInterface } from '../src';

@@ -4,9 +4,9 @@ import { assert } from 'chai';
 import gql from 'graphql-tag';
 
 import ApolloClient from 'apollo-client';
-import { MutationBehaviorReducerArgs, MutationBehavior, cleanArray } from 'apollo-client/data/mutationResults';
-import { NormalizedCache, StoreObject } from 'apollo-client/data/storeUtils';
-import { isMutationResultAction, isQueryResultAction } from 'apollo-client/actions';
+import { MutationBehaviorReducerArgs, MutationBehavior, cleanArray } from 'apollo-client/lib/src/data/mutationResults';
+import { NormalizedCache, StoreObject } from 'apollo-client/lib/src/data/storeUtils';
+import { isMutationResultAction, isQueryResultAction } from 'apollo-client/lib/src/actions';
 
 
 import { mockNetworkInterface } from '../src';

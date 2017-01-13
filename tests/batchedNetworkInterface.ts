@@ -2,15 +2,15 @@ import { assert } from 'chai';
 
 import { merge } from 'lodash';
 
-import { HTTPBatchedNetworkInterface } from 'apollo-client/transport/batchedNetworkInterface';
+import { HTTPBatchedNetworkInterface } from 'apollo-client/lib/src/transport/batchedNetworkInterface';
 
 import {
   Request,
   printRequest,
-} from 'apollo-client/transport/networkInterface';
+} from 'apollo-client/lib/src/transport/networkInterface';
 
-import { MiddlewareInterface } from 'apollo-client/transport/middleware';
-import { AfterwareInterface } from 'apollo-client/transport/afterware';
+import { MiddlewareInterface } from 'apollo-client/lib/src/transport/middleware';
+import { AfterwareInterface } from 'apollo-client/lib/src/transport/afterware';
 
 import { GraphQLResult } from 'graphql';
 

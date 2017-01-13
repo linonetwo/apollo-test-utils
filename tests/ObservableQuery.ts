@@ -3,8 +3,8 @@ import { useFakeTimers } from 'sinon';
 
 import gql from 'graphql-tag';
 
-import { ObservableQuery } from 'apollo-client/core/ObservableQuery';
-import { NetworkStatus } from 'apollo-client/queries/store';
+import { ObservableQuery } from 'apollo-client/lib/src/core/ObservableQuery';
+import { NetworkStatus } from 'apollo-client/lib/src/queries/store';
 
 
 import {

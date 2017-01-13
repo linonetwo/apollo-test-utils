@@ -5,17 +5,17 @@ import * as Rx from 'rxjs';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import gql from 'graphql-tag';
 
-import { QueryManager } from 'apollo-client/core/QueryManager';
-import { ObservableQuery } from 'apollo-client/core/ObservableQuery';
-import { WatchQueryOptions } from 'apollo-client/core/watchQueryOptions';
-import { NetworkInterface } from 'apollo-client/transport/networkInterface';
-import { ApolloError } from 'apollo-client/errors/ApolloError';
-import { Observer } from 'apollo-client/util/Observable';
-import { NetworkStatus } from 'apollo-client/queries/store';
-import { createApolloStore, ApolloStore } from 'apollo-client/store';
-import { getIdField } from 'apollo-client/data/extensions';
-import ApolloClient, { ApolloStateSelector } from 'apollo-client/ApolloClient';
-import { ApolloQueryResult } from 'apollo-client/core/QueryManager';
+import { QueryManager } from 'apollo-client/lib/src/core/QueryManager';
+import { ObservableQuery } from 'apollo-client/lib/src/core/ObservableQuery';
+import { WatchQueryOptions } from 'apollo-client/lib/src/core/watchQueryOptions';
+import { NetworkInterface } from 'apollo-client/lib/src/transport/networkInterface';
+import { ApolloError } from 'apollo-client/lib/src/errors/ApolloError';
+import { Observer } from 'apollo-client/lib/src/util/Observable';
+import { NetworkStatus } from 'apollo-client/lib/src/queries/store';
+import { createApolloStore, ApolloStore } from 'apollo-client/lib/src/store';
+import { getIdField } from 'apollo-client/lib/src/data/extensions';
+import ApolloClient, { ApolloStateSelector } from 'apollo-client/lib/src/ApolloClient';
+import { ApolloQueryResult } from 'apollo-client/lib/src/core/QueryManager';
 
 import {
   Document,

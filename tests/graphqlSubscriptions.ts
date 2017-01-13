@@ -4,9 +4,9 @@ import { assert } from 'chai';
 import gql from 'graphql-tag';
 
 import ApolloClient from 'apollo-client';
-import { isSubscriptionResultAction } from 'apollo-client/actions';
-import { QueryManager } from 'apollo-client/core/QueryManager';
-import { createApolloStore } from 'apollo-client/store';
+import { isSubscriptionResultAction } from 'apollo-client/lib/src/actions';
+import { QueryManager } from 'apollo-client/lib/src/core/QueryManager';
+import { createApolloStore } from 'apollo-client/lib/src/store';
 
 
 import { mockSubscriptionNetworkInterface } from '../src';
